@@ -55,7 +55,11 @@ function calcResult(){
 
 function tStrToSec(t){
 	let arr = t.split(":");
-	return (parseInt(arr[0]) * 3600) + (parseInt(arr[1]) * 60) + parseInt(arr[1]);
+	arr[0] = parseInt(arr[0]) || 0;
+	arr[1] = parseInt(arr[1]) || 0;
+	arr[2] = parseInt(arr[2]) || 0;
+
+	return (arr[0] * 3600) + (arr[1] * 60) + arr[2];
 }
 
 function makeTimeStringFromSec(s){
