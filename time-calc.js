@@ -19,7 +19,7 @@ function addNewReference(ref){
 	const timeGroup = $(".time-group");
 
 	ref.find(".remove-time-field").on("click", function(){
-		$(this).parent().parent().parent().remove();
+		$(this).parent().parent().remove();
 		calcResult();
 	});
 
