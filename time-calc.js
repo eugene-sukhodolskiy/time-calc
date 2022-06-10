@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	const reference = $(".reference");
 	const timeGroup = $(".time-group");
+	const perHour = localStorage.getItem("per-hour") || 1;
 	
 	addNewReference(reference.clone());	
 
@@ -10,7 +11,8 @@ $(document).ready(function(){
 
 	$(`[name="per-hour-field"]`).on("change blur input", function(){
 		calcResult();
-	});
+		localStorage.setItem("per-hour", $(this).val());
+	}).val(perHour);
 });
 
 function addNewReference(ref){
@@ -50,7 +52,7 @@ function calcResult(){
 
 	price = (sumSeconds / 3600 * perHour).toFixed(2);
 
-	resultContainer.html(makeTimeStringFromSec(sumSeconds) + " (" + price + "$)");
+	resultContainer.html(makeTimeStringFromSec(sumSeconds) + " (UAH " + price + ")");
 }
 
 function tStrToSec(t){
