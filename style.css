@@ -1,0 +1,17 @@
+.time-container {
+	margin-top: 60px;
+}
+
+.time-group {
+	margin-bottom: 20px;
+	display: grid;
+  grid-gap: 10px;
+}
+
+.per-hour {
+	margin-top: 60px;
+}
+
+.result-card {
+	margin-top: 30px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Time Calculator</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="time-calc.js"></script>
+</head>
+<body>
+
+	<div style="display: none;">
+		<div class="form-group reference">
+			<div class="row">
+				<div class="col-10">
+					<input type="text" class="form-control time-field" placeholder="00:00:00">
+				</div>
+				<div class="col-2">
+					<button class="btn btn-primary remove-time-field">-</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="col-6 offset-3 time-container">
+
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Enter The Time</h4>
+					
+					<div class="time-group"></div>
+						<div class="text-center">
+							<button class="btn btn-info add-time-field">+</button>
+						</div>
+
+						<div class="input-group mb-3 per-hour">
+							<span class="input-group-text">$</span>
+							<input 
+								type="number" 
+								step="1" 
+								class="form-control" 
+								name="per-hour-field" 
+								aria-label="Money Per Hour" 
+								value="1"
+							>
+							<span class="input-group-text">.00</span>
+						</div>
+				</div>
+			</div>
+
+			<div class="alert alert-dismissible alert-success result-card">
+				<strong>RESULT:</strong>
+				<span class="result-container">00:00:00</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
